@@ -1,0 +1,2 @@
+2026-11-22	lock sheet (kept outside the repo)	c06cf4212d3df26cfa96250fb760a2927b28b53b4a285307ddb19fd4a4e09f1a
+2026-11-22	mplus_topics_2026-11-21.xml	605ceac294c43ca8d56b95861de9788e72d1a4679da591ee9b7c4d11e472dafe

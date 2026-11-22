@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pyodide load test</title>
+<style>
+  body { font: 16px/1.5 system-ui, sans-serif; max-width: 40rem; margin: 0 auto; padding: 1rem; }
+  .spinner { width: 2rem; height: 2rem; border: 3px solid #ccc; border-top-color: #333; border-radius: 50%; animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+  td { padding: 0.3rem 0.5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+  .note { color: #555; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<h1>Pyodide load test</h1>
+<p class="note">Open in a private window for a cold run, then reload for a warm run. Keep the tab in front while it loads.</p>
+<div class="spinner" id="spinner"></div>
+<table id="results"></table>
+<script>
+const PYODIDE_VERSION = "314.0.7";
+const rows = document.getElementById("results");
+
+function row(label, value) {
+  const tr = rows.insertRow();
+  tr.insertCell().textContent = label;
+  tr.insertCell().textContent = value;
+}
+
+const seconds = (ms) => `${(ms / 1000).toFixed(2)} s`;
+const megabytes = (bytes) => `${(bytes / 1e6).toFixed(1)} MB`;
+
+let loading = true;
+let longestGap = 0;
+let lastFrame = null;
+function tick(time) {
+  if (lastFrame !== null) longestGap = Math.max(longestGap, time - lastFrame);
+  lastFrame = time;
+  if (loading) requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+const worker = new Worker("worker.js", { type: "module" });
+worker.postMessage({ version: PYODIDE_VERSION });
+worker.onmessage = ({ data }) => {
+  loading = false;
+  document.getElementById("spinner").hidden = true;
+  if (data.error) {
+    row("Error", data.error);
+    return;
+  }
+  const since = (t) => t - performance.timeOrigin;
+  const transfer = data.resources.reduce((sum, r) => sum + r.transfer, 0);
+  const decoded = data.resources.reduce((sum, r) => sum + r.decoded, 0);
+  const ready = since(data.ready);
+
+  row("Pyodide version", PYODIDE_VERSION);
+  row("Page start to Python ready", seconds(ready));
+  row("Under 5 s", ready < 5000 ? "yes" : "no");
+  row("pyodide.mjs downloaded", seconds(since(data.scriptLoaded)));
+  row("Runtime start after script", seconds(data.ready - data.scriptLoaded));
+  row("First Python run", `${Math.round(data.ran - data.ready)} ms`);
+  row("Longest main-thread frame gap", `${Math.round(longestGap)} ms`);
+  row("Downloaded (over the network)", transfer === 0 ? "0 MB (from cache)" : megabytes(transfer));
+  row("Decoded size", megabytes(decoded));
+  for (const r of data.resources) row(`  ${r.name}`, r.transfer === 0 ? "cache" : megabytes(r.transfer));
+  row("Python check", data.result);
+  row("Device", navigator.userAgent);
+};
+</script>
+</body>
+</html>
