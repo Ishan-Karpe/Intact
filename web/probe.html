@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TypeScript load test</title>
+<style>
+  body { font: 16px/1.5 system-ui, sans-serif; max-width: 40rem; margin: 0 auto; padding: 1rem; }
+  table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+  td { padding: 0.3rem 0.5rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<h1>TypeScript load test</h1>
+<table id="results"></table>
+<script type="module">
+import { similarity } from "./js/similarity.js";
+
+const ready = performance.now();
+const rows = document.getElementById("results");
+function row(label, value) {
+  const tr = rows.insertRow();
+  tr.insertCell().textContent = label;
+  tr.insertCell().textContent = value;
+}
+
+const filler = (n) => Array.from({ length: n }, (_, i) => `word${i % 37}`).join(" ");
+const original = `Wait at least 2 hours before you eat. ${filler(242)}`;
+const simplified = `Wait 2 hours before you eat. ${filler(180)}`;
+const start = performance.now();
+const score = similarity(original, simplified);
+const elapsed = performance.now() - start;
+
+row("Page start to code ready", `${(ready / 1000).toFixed(2)} s`);
+row("Similarity on 250-word texts", `${elapsed.toFixed(1)} ms`);
+row("Score on 250-word texts", score.toFixed(3));
+row("Short check (expect 0.857)", similarity("Wait at least 2 hours before you eat.", "Wait 2 hours before you eat.").toFixed(3));
+row("Device", navigator.userAgent);
+</script>
+</body>
+</html>

@@ -16,11 +16,16 @@
 </head>
 <body>
 <h1>Pyodide load test</h1>
-<p class="note">Open in a private window for a cold run, then reload for a warm run. Keep the tab in front while it loads.</p>
+<p class="note">Open in a private window for a cold run, then reload for a warm run. Keep the tab in front while it loads. Add #npm to the address to load from a second path this browser may not have cached.</p>
 <div class="spinner" id="spinner"></div>
 <table id="results"></table>
 <script>
 const PYODIDE_VERSION = "314.0.7";
+const BASES = {
+  full: `https://cdn.jsdelivr.net/pyodide/v${PYODIDE_VERSION}/full/`,
+  npm: `https://cdn.jsdelivr.net/npm/pyodide@${PYODIDE_VERSION}/`,
+};
+const baseName = location.hash.slice(1) in BASES ? location.hash.slice(1) : "full";
 const rows = document.getElementById("results");
 
 function row(label, value) {
@@ -43,7 +48,7 @@ function tick(time) {
 requestAnimationFrame(tick);
 
 const worker = new Worker("worker.js", { type: "module" });
-worker.postMessage({ version: PYODIDE_VERSION });
+worker.postMessage({ base: BASES[baseName] });
 worker.onmessage = ({ data }) => {
   loading = false;
   document.getElementById("spinner").hidden = true;
@@ -56,7 +61,7 @@ worker.onmessage = ({ data }) => {
   const decoded = data.resources.reduce((sum, r) => sum + r.decoded, 0);
   const ready = since(data.ready);
 
-  row("Pyodide version", PYODIDE_VERSION);
+  row("Pyodide version", `${PYODIDE_VERSION} (${baseName} path)`);
   row("Page start to Python ready", seconds(ready));
   row("Under 5 s", ready < 5000 ? "yes" : "no");
   row("pyodide.mjs downloaded", seconds(since(data.scriptLoaded)));

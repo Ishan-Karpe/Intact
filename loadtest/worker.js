@@ -1,7 +1,7 @@
 const now = () => performance.timeOrigin + performance.now();
 
 self.onmessage = async ({ data }) => {
-  const base = `https://cdn.jsdelivr.net/pyodide/v${data.version}/full/`;
+  const base = data.base;
   try {
     const started = now();
     const { loadPyodide } = await import(base + "pyodide.mjs");
