@@ -3,3 +3,4 @@
 2026-11-22	heldout_sealed.json	ec886237c23861b85d5be368c6c5006e2cdde327ef1d4a8f8be95297db06bab3
 2026-11-23	lock addendum (kept outside the repo)	839c91e8f7d4ef28637510a683b276f99de4231213eda3fae4ba738670e5ac4d
 2026-11-23	lock addendum with A5, added after the calibration outputs (kept outside the repo)	8c2c180d02af75905042ad90693965b7b72fd0e042214cfccebac5fafd6c204c
+2026-11-23	lock addendum with A6, before hand labeling and the held-out run (kept outside the repo)	6ad9492bdf460b39043d28a82a750958c2e38d2d74acdac6561997ee0ad8fea6
