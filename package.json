@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "node --test tests/*.test.ts"
+    "test": "node --test tests/*.test.ts",
+    "parity": "node audit/parity.ts"
   },
   "devDependencies": {
     "typescript": "5.9.3"
