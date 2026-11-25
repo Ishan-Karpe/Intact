@@ -30,19 +30,23 @@ const SPANS = new RegExp(
 );
 const CATEGORIES: Category[] = ["limit", "time", "quantity"];
 
+// Every match, repeats included. Recall uses this so a hand mark on a later repeat still counts as found.
+export function findSpans(text: string): Span[] {
+  return [...blankExcluded(text).matchAll(SPANS)].map((m) => ({
+    text: text.slice(m.index, m.index + m[0].length),
+    start: m.index,
+    end: m.index + m[0].length,
+    category: CATEGORIES.find((name) => m.groups?.[name] !== undefined)!,
+  }));
+}
+
 export function extractSpans(text: string): Span[] {
   const seen = new Set<string>();
-  const spans: Span[] = [];
-  for (const m of blankExcluded(text).matchAll(SPANS)) {
-    const category = CATEGORIES.find((name) => m.groups?.[name] !== undefined)!;
-    const start = m.index;
-    const end = start + m[0].length;
-    const spanText = text.slice(start, end);
-    // #3: a detail repeated in the same handout counts once.
-    const id = `${category}|${detailKey(spanText)}`;
-    if (seen.has(id)) continue;
+  // #3: a detail repeated in the same handout counts once.
+  return findSpans(text).filter((span) => {
+    const id = `${span.category}|${detailKey(span.text)}`;
+    if (seen.has(id)) return false;
     seen.add(id);
-    spans.push({ text: spanText, start, end, category });
-  }
-  return spans;
+    return true;
+  });
 }

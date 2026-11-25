@@ -5,3 +5,4 @@
 2026-11-23	lock addendum with A5, added after the calibration outputs (kept outside the repo)	8c2c180d02af75905042ad90693965b7b72fd0e042214cfccebac5fafd6c204c
 2026-11-23	lock addendum with A6, before hand labeling and the held-out run (kept outside the repo)	6ad9492bdf460b39043d28a82a750958c2e38d2d74acdac6561997ee0ad8fea6
 2026-11-24	lock addendum with A7, before hand labeling (kept outside the repo)	98ae8f9b0ea02b50069435abe124d1d60524b9207acae62f729b1021492e8f89
+2026-11-24	day 3 freeze manifest (data/freeze_day3.sha256; A6 applies)	ffa010218a8fee9f94e329e97b5f1b12a0cd44441b26d8f6b3674c51ae59d73e
