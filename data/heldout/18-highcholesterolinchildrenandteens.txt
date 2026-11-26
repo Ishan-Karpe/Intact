@@ -1,0 +1,16 @@
+There is a blood test to measure cholesterol levels. The test gives information about:
+- Total cholesterol. This is a measure of the total amount of cholesterol in your blood. It includes both low-density lipoprotein (LDL) cholesterol and high-density lipoprotein (HDL) cholesterol.
+- LDL cholesterol. LDL is often called "bad" cholesterol because it is the main source of cholesterol buildup and blockage in the arteries.
+- HDL cholesterol. HDL is often called "good" cholesterol because it helps remove cholesterol from your arteries.
+- Non-HDL. This number is your total cholesterol minus your HDL. Your non-HDL includes LDL and other types of cholesterol such as VLDL (very-low-density lipoprotein).
+- Triglycerides. This is another type of fat in your blood that can raise the risk of heart disease.
+For anyone aged 19 or younger, the healthy levels of cholesterol are
+Type of Cholesterol Healthy Level
+Total Cholesterol Less than 170 mg/dL
+Non-HDL Less than 120 mg/dL
+LDL Less than 110 mg/dL
+HDL More than 45 mg/dL
+When and how often your child or teen should get this test depends on their age, risk factors, and family history. The general recommendations are:
+- The first test should be between ages 9 to 11
+- Children should have the test again every 5 years
+- Some children may have this test starting at age 2 if there is a family history of high cholesterol, heart attack, or stroke

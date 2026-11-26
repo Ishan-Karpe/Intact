@@ -1,0 +1,204 @@
+file,sentence_no,sentence,text,category,note
+02-alcohol,1,Excessive drinking includes binge drinking and heavy alcohol use:,,,
+02-alcohol,2,- Binge drinking is drinking so much at once that your blood alcohol concentration (BAC) level is 0.08% or more:,,,
+02-alcohol,3,"- For men, this usually happens after having 5 or more drinks within a few hours.",5 or more drinks,limit,"""Or more"" is listed and drinks is a closed count unit; ""within a few hours"" has no locked numeral."
+02-alcohol,4,"- For women, it is usually after about 4 or more drinks within a few hours.",4 or more drinks,limit,"""Or more"" is listed and drinks is a closed count unit; ""within a few hours"" has no locked numeral."
+02-alcohol,5,- Heavy alcohol use means:,,,
+02-alcohol,6,"- For men, having more than 5 drinks on any day or more than 15 drinks per week.",more than 5 drinks,limit,"""More than"" and drinks qualify; ""on any day"" is not a locked time-window form."
+02-alcohol,6,"- For men, having more than 5 drinks on any day or more than 15 drinks per week.",more than 15 drinks per week,limit,"""More than"" is listed, drinks is a closed count unit, and ""per week"" is a locked time window."
+02-alcohol,7,"- For women, having more than 4 drinks on any day or more than 8 drinks per week.",more than 4 drinks,limit,"""More than"" and drinks qualify; ""on any day"" is not a locked time-window form."
+02-alcohol,7,"- For women, having more than 4 drinks on any day or more than 8 drinks per week.",more than 8 drinks per week,limit,"""More than"" is listed, drinks is a closed count unit, and ""per week"" is a locked time window."
+02-alcohol,8,"Binge drinking raises your risk of injuries, car crashes, and alcohol overdose.",,,
+02-alcohol,9,It also puts you at risk of becoming violent or being the victim of violence.,,,
+02-alcohol,10,Heavy alcohol use over a long period of time may cause health problems such as:,,,
+02-alcohol,11,- Alcohol use disorder (AUD),,,
+02-alcohol,12,"- Liver diseases, including cirrhosis and alcohol-associated liver disease (ALD)",,,
+02-alcohol,13,- Heart diseases,,,
+02-alcohol,14,- Increased risk of certain cancers,,,
+02-alcohol,15,- Increased risk of injuries,,,
+02-alcohol,16,"Heavy alcohol use can also cause problems at home, at work, and with friends.",,,
+02-alcohol,17,But treatment can help.,,,
+02-alcohol,18,NIH: National Institute on Alcohol Abuse and Alcoholism,,,
+04-backpain,1,"If you've ever groaned, ""Oh, my aching back!"", you are not alone.",,,
+04-backpain,2,"Back pain is one of the most common medical problems, affecting 8 out of 10 people at some point during their lives.",,,
+04-backpain,3,"Back pain can range from a dull, constant ache to a sudden, sharp pain.",,,
+04-backpain,4,Acute back pain comes on suddenly and usually lasts from a few days to a few weeks.,,,"Original: ""from a few days to a few weeks"". ""Few"" is not a locked numeral."
+04-backpain,5,Back pain is called chronic if it lasts for more than three months.,more than three months,limit,"""More than"" is listed and the number/unit is present."
+04-backpain,6,"Most back pain goes away on its own, though it may take awhile.",,,
+04-backpain,7,Taking over-the-counter pain relievers and resting can help.,,,
+04-backpain,8,"However, staying in bed for more than 1 or 2 days can make it worse.",more than 1 or 2 days,limit,"""More than"" is listed and the number/unit is present."
+04-backpain,9,"If your back pain is severe or doesn't improve after three days, you should call your health care provider.",three days,time,"Three days is a number plus a locked time unit; ""after"" is not part of the time span."
+04-backpain,10,You should also get medical attention if you have back pain following an injury.,,,
+04-backpain,11,"Treatment for back pain depends on what kind of pain you have, and what is causing it.",,,
+04-backpain,12,"It may include hot or cold packs, exercise, medicines, injections, complementary treatments, and sometimes surgery.",,,
+04-backpain,13,NIH: National Institute of Arthritis and Musculoskeletal and Skin Diseases,,,
+06-calcium,1,The amount of calcium you need each day depends on your age and other factors.,,,
+06-calcium,2,"The recommended amounts, in milligrams (mg), are:",,,
+06-calcium,3,- Birth to 6 months: 200 mg,6 months,time,"Months is a locked time unit; ""Birth to"" is outside the numeric span."
+06-calcium,3,- Birth to 6 months: 200 mg,200 mg,quantity,The measure/count unit is in the closed quantity list.
+06-calcium,4,- Infants 7-12 months: 260 mg,7-12 months,time,The span has a locked time unit or listed frequency form.
+06-calcium,4,- Infants 7-12 months: 260 mg,260 mg,quantity,The measure/count unit is in the closed quantity list.
+06-calcium,5,- Children 1-3 years: 700 mg,1-3 years,time,The span has a locked time unit or listed frequency form.
+06-calcium,5,- Children 1-3 years: 700 mg,700 mg,quantity,The measure/count unit is in the closed quantity list.
+06-calcium,6,"- Children 4-8 years: 1,000 mg",4-8 years,time,The span has a locked time unit or listed frequency form.
+06-calcium,6,"- Children 4-8 years: 1,000 mg","1,000 mg",quantity,The measure/count unit is in the closed quantity list.
+06-calcium,7,"- Children 9-13 years: 1,300 mg",9-13 years,time,The span has a locked time unit or listed frequency form.
+06-calcium,7,"- Children 9-13 years: 1,300 mg","1,300 mg",quantity,The measure/count unit is in the closed quantity list.
+06-calcium,8,"- Teens 14-18 years: 1,300 mg",14-18 years,time,The span has a locked time unit or listed frequency form.
+06-calcium,9,"- Adults 19-50 years: 1,000 mg",19-50 years,time,The span has a locked time unit or listed frequency form.
+06-calcium,10,"- Adult men 51-70 years: 1,000 mg",51-70 years,time,The span has a locked time unit or listed frequency form.
+06-calcium,11,"- Adult women 51-70 years: 1,200 mg","1,200 mg",quantity,The measure/count unit is in the closed quantity list.
+06-calcium,12,"- Adults 71 years and older: 1,200 mg",71 years and older,limit,"""And older"" is listed after the number and unit."
+06-calcium,13,"- Pregnant and breastfeeding teens: 1,300 mg",,,
+06-calcium,14,"- Pregnant and breastfeeding adults: 1,000 mg",,,
+06-calcium,15,"Certain people may have trouble getting enough calcium, including:",,,
+06-calcium,16,- Children and teens age 4 to 18 years,4 to 18 years,time,The span has a locked time unit or listed frequency form.
+06-calcium,17,- People who are Black or Asian,,,
+06-calcium,18,- Adults age 50 years and older living in poverty,50 years and older,limit,"""And older"" is listed; years is the unit. Removed the non-span prefix ""age""."
+06-calcium,19,- Postmenopausal women; your body absorbs and retains less calcium after menopause,,,
+06-calcium,20,- People who don't drink milk or eat other dairy products,,,
+06-calcium,21,"Check with your health care provider to see if you need to take calcium supplements, and if so, how much you should take.",,,
+06-calcium,22,Your provider may want to first do a calcium blood test to see if you are getting enough of it.,,,
+06-calcium,23,NIH: National Institutes of Health Office of Dietary Supplements,,,
+08-cholesterollevelswhatyouneedtoknow,1,Cholesterol numbers are measured in milligrams per deciliter (mg/dL).,,,
+08-cholesterollevelswhatyouneedtoknow,2,Talk with your provider about what your cholesterol numbers should be.,,,
+08-cholesterollevelswhatyouneedtoknow,3,"The numbers that are best for you may depend on your age, race, blood pressure, weight, family history, and more.",,,
+08-cholesterollevelswhatyouneedtoknow,4,"However, here are some general guidelines showing the desirable levels (levels that are healthy for most people):",,,
+08-cholesterollevelswhatyouneedtoknow,5,Anyone age 19 or younger:,,,"Original: ""age 19 or younger"". ""Or younger"" is not listed and 19 has no locked unit."
+08-cholesterollevelswhatyouneedtoknow,6,Type of Cholesterol Healthy Level,,,
+08-cholesterollevelswhatyouneedtoknow,7,Total Cholesterol Less than 170 mg/dL,Less than 170 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+08-cholesterollevelswhatyouneedtoknow,8,Non-HDL Less than 120 mg/dL,Less than 120 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+08-cholesterollevelswhatyouneedtoknow,9,LDL Less than 110 mg/dL,Less than 110 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+08-cholesterollevelswhatyouneedtoknow,10,HDL More than 45mg/dL,More than 45mg/dL,limit,"""More than"" is listed and the number/unit is present."
+08-cholesterollevelswhatyouneedtoknow,11,Men age 20 or older:,,,"Original: ""age 20 or older"". ""Or older"" is not listed and 20 has no locked unit."
+08-cholesterollevelswhatyouneedtoknow,12,Type of Cholesterol Healthy Level,,,
+08-cholesterollevelswhatyouneedtoknow,13,Total Cholesterol Less than 200 mg/dL,Less than 200 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+08-cholesterollevelswhatyouneedtoknow,14,Non-HDL Less than 130 mg/dL,Less than 130 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+08-cholesterollevelswhatyouneedtoknow,15,LDL Less than 100 mg/dL,Less than 100 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+08-cholesterollevelswhatyouneedtoknow,16,HDL Greater than or equal to 60 mg/dL is best.,60 mg/dL,quantity,"mg/dL is a closed-list unit; ""Greater than or equal to"" is not a listed limit qualifier."
+08-cholesterollevelswhatyouneedtoknow,17,Levels less than 40 mg/dL are considered low.,less than 40 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+08-cholesterollevelswhatyouneedtoknow,18,Women age 20 or older:,,,
+08-cholesterollevelswhatyouneedtoknow,19,Type of Cholesterol Healthy Level,,,
+08-cholesterollevelswhatyouneedtoknow,20,Total Cholesterol Less than 200 mg/dL,,,
+08-cholesterollevelswhatyouneedtoknow,21,Non-HDL Less than 130 mg/dL,,,
+08-cholesterollevelswhatyouneedtoknow,22,LDL Less than 100 mg/dL,,,
+08-cholesterollevelswhatyouneedtoknow,23,HDL Greater than or equal to 60 mg/dL is best.,,,
+08-cholesterollevelswhatyouneedtoknow,24,Levels less than 50 mg/dL are considered low.,less than 50 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+08-cholesterollevelswhatyouneedtoknow,25,"Triglycerides are not a type of cholesterol, but they are also measured in this test.",,,
+08-cholesterollevelswhatyouneedtoknow,26,A normal triglyceride level is below 150 mg/dL.,150 mg/dL,quantity,"mg/dL is a closed-list unit; ""below"" is not a listed limit qualifier."
+08-cholesterollevelswhatyouneedtoknow,27,You might need treatment if you have triglyceride levels that are borderline high (150-199 mg/dL) or high (200 mg/dL or more).,150-199 mg/dL,quantity,The measure/count unit is in the closed quantity list.
+08-cholesterollevelswhatyouneedtoknow,27,You might need treatment if you have triglyceride levels that are borderline high (150-199 mg/dL) or high (200 mg/dL or more).,200 mg/dL or more,limit,"""Or more"" is listed after the number and unit."
+10-cryptosporidiosis,1,The most common symptom of cryptosporidiosis is watery diarrhea.,,,
+10-cryptosporidiosis,2,Other symptoms include:,,,
+10-cryptosporidiosis,3,- Dehydration,,,
+10-cryptosporidiosis,4,- Weight loss,,,
+10-cryptosporidiosis,5,- Stomach cramps or pain,,,
+10-cryptosporidiosis,6,- Fever,,,
+10-cryptosporidiosis,7,- Nausea and vomiting,,,
+10-cryptosporidiosis,8,The symptoms generally begin 2 to 10 days after becoming infected with the parasite.,2 to 10 days,time,The span has a locked time unit or listed frequency form.
+10-cryptosporidiosis,9,"In people with healthy immune systems, the symptoms can last about 1 to 2 weeks.",1 to 2 weeks,time,The span has a locked time unit or listed frequency form.
+10-cryptosporidiosis,10,"Occasionally, the symptoms can last longer or come and go for up to 30 days.",up to 30 days,limit,"""Up to"" is listed and the number/unit is present."
+10-cryptosporidiosis,11,"People with weakened immune systems may develop a serious, chronic illness.",,,
+10-cryptosporidiosis,12,Some reasons why you might have a weakened immune system could include:,,,
+10-cryptosporidiosis,13,- Having HIV,,,
+10-cryptosporidiosis,14,- Having cancer,,,
+10-cryptosporidiosis,15,- Having a genetic condition that affects the immune system,,,
+10-cryptosporidiosis,16,"- Taking certain medicines, such as chemotherapy and medicines needed after an organ transplant",,,
+10-cryptosporidiosis,17,Some people may not have any symptoms at all.,,,
+10-cryptosporidiosis,18,"Contact your health care provider if you have watery diarrhea that lasts more than a few days, especially if you have a weakened immune system.",,,"Original: ""more than a few days"". ""Few"" is not a locked numeral."
+12-drymouth,1,Treatment for dry mouth depends on the cause.,,,
+12-drymouth,2,"For example, if a medicine is causing dry mouth, your provider or dentist may suggest adjusting the dosage or switching medicines.",,,
+12-drymouth,3,"In some cases, they might give you artificial saliva or a medicine to help your salivary glands work better.",,,
+12-drymouth,4,There are also several things you can do to help relieve your symptoms:,,,
+12-drymouth,5,- Drink plenty of water,,,
+12-drymouth,6,"- Avoid drinks with caffeine, which can dry out your mouth",,,
+12-drymouth,7,- Chew sugarless gum or suck on sugarless hard candy to stimulate saliva flow,,,
+12-drymouth,8,- Avoid spicy or salty foods because they can cause pain if your mouth is dry,,,
+12-drymouth,9,- Avoid alcohol and tobacco,,,
+12-drymouth,10,- Using a humidifier at night,,,
+12-drymouth,11,- Use a mouthwash made for dry mouth,,,
+12-drymouth,12,"Since dry mouth can raise your risk of tooth decay, it's important to brush and floss your teeth regularly and see your dentist at least twice a year.",at least twice a year,limit,"""At least"" is listed; the number/unit and frequency period are locked."
+12-drymouth,13,NIH: National Institute of Dental and Craniofacial Research,,,
+14-foodborneillness,1,"Each year, around 48 million people in the United States get sick from contaminated food.",,,
+14-foodborneillness,2,Common causes include bacteria and viruses.,,,
+14-foodborneillness,3,"Less often, the cause may be a parasite or a harmful chemical, such as a high amount of pesticides.",,,
+14-foodborneillness,4,Symptoms of foodborne illness depend on the cause.,,,
+14-foodborneillness,5,They can be mild or serious.,,,
+14-foodborneillness,6,They usually include:,,,
+14-foodborneillness,7,- Upset stomach,,,
+14-foodborneillness,8,- Abdominal cramps,,,
+14-foodborneillness,9,- Nausea and vomiting,,,
+14-foodborneillness,10,- Diarrhea,,,
+14-foodborneillness,11,- Fever,,,
+14-foodborneillness,12,- Dehydration,,,
+14-foodborneillness,13,Most foodborne illnesses are acute.,,,
+14-foodborneillness,14,This means that they happen suddenly and last a short time.,,,
+14-foodborneillness,15,It takes several steps to get food from the farm or fishery to your dining table.,,,
+14-foodborneillness,16,Contamination can happen during any of these steps.,,,
+14-foodborneillness,17,"For example, it can happen to:",,,
+14-foodborneillness,18,- Raw meat during slaughter,,,
+14-foodborneillness,19,- Fruits and vegetables when they are growing or when they are processed,,,
+14-foodborneillness,20,- Refrigerated foods when they are left on a loading dock in warm weather,,,
+14-foodborneillness,21,But it can also happen in your kitchen if you leave food out for more than 2 hours at room temperature.,more than 2 hours,limit,"""More than"" is listed and the number/unit is present."
+14-foodborneillness,22,Handling food safely can help prevent foodborne illnesses.,,,
+14-foodborneillness,23,Most people with foodborne illness get better on their own.,,,
+14-foodborneillness,24,It is important to replace lost fluids and electrolytes to prevent dehydration.,,,
+14-foodborneillness,25,"If your health care provider can diagnose the specific cause, you may get medicines such as antibiotics to treat it.",,,
+14-foodborneillness,26,"For more serious illness, you may need treatment at a hospital.",,,
+14-foodborneillness,27,NIH: National Institute of Diabetes and Digestive and Kidney Diseases,,,
+16-glaucoma,1,A comprehensive eye exam can tell if you have glaucoma.,,,
+16-glaucoma,2,This would include:,,,
+16-glaucoma,3,- A dilated eye exam.,,,
+16-glaucoma,4,This involves getting eye drops that dilate (widen) your pupils.,,,
+16-glaucoma,5,This allows more light to enter your eye.,,,
+16-glaucoma,6,Your eye care provider examines your eyes using a special magnifying lens.,,,
+16-glaucoma,7,This provides a clear view of important tissues at the back of your eye to check for glaucoma or other eye problems.,,,
+16-glaucoma,8,"For a few hours after the exam your vision may be blurry and sensitive to light, so you will need someone to take you home.",,,"Original: ""a few hours"". ""Few"" is not a locked numeral."
+16-glaucoma,9,- Visual field testing.,,,
+16-glaucoma,10,This check of your peripheral (side) vision allows your eye care provider to find out how well you can see objects off to the side of your vision without moving your eyes.,,,
+16-glaucoma,11,- Tonometry.,,,
+16-glaucoma,12,This measures the pressure inside your eye.,,,
+16-glaucoma,13,"If you're at higher risk for glaucoma, you should get comprehensive eye exams every one to two years.",every one to two years,time,The span has a locked time unit or listed frequency form.
+16-glaucoma,14,You're at higher risk if you:,,,
+16-glaucoma,15,- Are Black or African American and over age 40,,,"Original: ""age 40"". The source says ""over age 40""; over is not listed, and 40 has no locked unit."
+16-glaucoma,16,"- Are over age 60, especially if you're Hispanic or Latino",,,"Original: ""age 60"". The source says ""over age 60""; over is not listed, and 60 has no locked unit."
+16-glaucoma,17,- Have a family history of glaucoma,,,
+16-glaucoma,18,You're also at higher risk if you have high blood pressure or diabetes and should get a dilated eye exam at least once a year.,at least once a year,limit,"""At least"" is listed; the number/unit and frequency period are locked."
+16-glaucoma,19,Talk with your provider about your risk and how often you should get your eyes checked.,,,
+18-highcholesterolinchildrenandteens,1,There is a blood test to measure cholesterol levels.,,,
+18-highcholesterolinchildrenandteens,2,The test gives information about:,,,
+18-highcholesterolinchildrenandteens,3,- Total cholesterol.,,,
+18-highcholesterolinchildrenandteens,4,This is a measure of the total amount of cholesterol in your blood.,,,
+18-highcholesterolinchildrenandteens,5,It includes both low-density lipoprotein (LDL) cholesterol and high-density lipoprotein (HDL) cholesterol.,,,
+18-highcholesterolinchildrenandteens,6,- LDL cholesterol.,,,
+18-highcholesterolinchildrenandteens,7,"LDL is often called ""bad"" cholesterol because it is the main source of cholesterol buildup and blockage in the arteries.",,,
+18-highcholesterolinchildrenandteens,8,- HDL cholesterol.,,,
+18-highcholesterolinchildrenandteens,9,"HDL is often called ""good"" cholesterol because it helps remove cholesterol from your arteries.",,,
+18-highcholesterolinchildrenandteens,10,- Non-HDL.,,,
+18-highcholesterolinchildrenandteens,11,This number is your total cholesterol minus your HDL.,,,
+18-highcholesterolinchildrenandteens,12,Your non-HDL includes LDL and other types of cholesterol such as VLDL (very-low-density lipoprotein).,,,
+18-highcholesterolinchildrenandteens,13,- Triglycerides.,,,
+18-highcholesterolinchildrenandteens,14,This is another type of fat in your blood that can raise the risk of heart disease.,,,
+18-highcholesterolinchildrenandteens,15,"For anyone aged 19 or younger, the healthy levels of cholesterol are",,,"Original: ""aged 19 or younger"". ""Or younger"" is not listed and 19 has no locked unit."
+18-highcholesterolinchildrenandteens,16,Type of Cholesterol Healthy Level,,,
+18-highcholesterolinchildrenandteens,17,Total Cholesterol Less than 170 mg/dL,Less than 170 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+18-highcholesterolinchildrenandteens,18,Non-HDL Less than 120 mg/dL,Less than 120 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+18-highcholesterolinchildrenandteens,19,LDL Less than 110 mg/dL,Less than 110 mg/dL,limit,"""Less than"" is listed and the measure unit is closed-list."
+18-highcholesterolinchildrenandteens,20,HDL More than 45 mg/dL,More than 45 mg/dL,limit,"""More than"" is listed and the number/unit is present."
+18-highcholesterolinchildrenandteens,21,"When and how often your child or teen should get this test depends on their age, risk factors, and family history.",,,
+18-highcholesterolinchildrenandteens,22,The general recommendations are:,,,
+18-highcholesterolinchildrenandteens,23,- The first test should be between ages 9 to 11,,,"Original: ""ages 9 to 11"". Ages alone with no listed age syntax or unit do not form a locked span."
+18-highcholesterolinchildrenandteens,24,- Children should have the test again every 5 years,every 5 years,time,The span has a locked time unit or listed frequency form.
+18-highcholesterolinchildrenandteens,25,"- Some children may have this test starting at age 2 if there is a family history of high cholesterol, heart attack, or stroke",,,"Original: ""age 2"". Age alone has no locked unit or qualifying age syntax."
+20-indigestion,1,Nearly everyone has had indigestion at one time.,,,"Original: ""at one time"". Time is not a locked unit, and this is not a listed frequency form."
+20-indigestion,2,It's a feeling of discomfort or a burning feeling in your upper abdomen.,,,
+20-indigestion,3,You may have heartburn or belch and feel bloated.,,,
+20-indigestion,4,"You may also feel nauseated, or even throw up.",,,
+20-indigestion,5,"You might get indigestion from eating too much or too fast, eating high-fat foods, or eating when you're stressed.",,,
+20-indigestion,6,"Smoking, drinking too much alcohol, using some medicines, being tired, and having ongoing stress can also cause indigestion or make it worse.",,,
+20-indigestion,7,"Sometimes the cause is a problem with the digestive tract, like an ulcer or GERD.",,,
+20-indigestion,8,Avoiding foods and situations that seem to cause it may help.,,,
+20-indigestion,9,"Because indigestion can be a sign of a more serious problem, see your health care provider if it lasts for more than two weeks or if you have severe pain or other symptoms.",more than two weeks,limit,"""More than"" is listed and the number/unit is present."
+20-indigestion,10,"Your health care provider may use x-rays, lab tests, and an upper endoscopy to diagnose the cause.",,,
+20-indigestion,11,You may need medicines to treat the symptoms.,,,
+20-indigestion,12,NIH: National Institute of Diabetes and Digestive and Kidney Diseases,,,

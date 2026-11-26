@@ -1,0 +1,53 @@
+file,text,occurrence,category
+02-alcohol,5 or more drinks,1,limit
+02-alcohol,4 or more drinks,1,limit
+02-alcohol,more than 5 drinks,1,limit
+02-alcohol,more than 15 drinks per week,1,limit
+02-alcohol,more than 4 drinks,1,limit
+02-alcohol,more than 8 drinks per week,1,limit
+04-backpain,more than three months,1,limit
+04-backpain,more than 1 or 2 days,1,limit
+04-backpain,three days,1,time
+06-calcium,6 months,1,time
+06-calcium,200 mg,1,quantity
+06-calcium,7-12 months,1,time
+06-calcium,260 mg,1,quantity
+06-calcium,1-3 years,1,time
+06-calcium,700 mg,1,quantity
+06-calcium,4-8 years,1,time
+06-calcium,"1,000 mg",1,quantity
+06-calcium,9-13 years,1,time
+06-calcium,"1,300 mg",1,quantity
+06-calcium,14-18 years,1,time
+06-calcium,19-50 years,1,time
+06-calcium,51-70 years,1,time
+06-calcium,"1,200 mg",1,quantity
+06-calcium,71 years and older,1,limit
+06-calcium,4 to 18 years,1,time
+06-calcium,50 years and older,1,limit
+08-cholesterollevelswhatyouneedtoknow,Less than 170 mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,Less than 120 mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,Less than 110 mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,More than 45mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,Less than 200 mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,Less than 130 mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,Less than 100 mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,60 mg/dL,1,quantity
+08-cholesterollevelswhatyouneedtoknow,less than 40 mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,less than 50 mg/dL,1,limit
+08-cholesterollevelswhatyouneedtoknow,150 mg/dL,1,quantity
+08-cholesterollevelswhatyouneedtoknow,150-199 mg/dL,1,quantity
+08-cholesterollevelswhatyouneedtoknow,200 mg/dL or more,1,limit
+10-cryptosporidiosis,2 to 10 days,1,time
+10-cryptosporidiosis,1 to 2 weeks,1,time
+10-cryptosporidiosis,up to 30 days,1,limit
+12-drymouth,at least twice a year,1,limit
+14-foodborneillness,more than 2 hours,1,limit
+16-glaucoma,every one to two years,1,time
+16-glaucoma,at least once a year,1,limit
+18-highcholesterolinchildrenandteens,Less than 170 mg/dL,1,limit
+18-highcholesterolinchildrenandteens,Less than 120 mg/dL,1,limit
+18-highcholesterolinchildrenandteens,Less than 110 mg/dL,1,limit
+18-highcholesterolinchildrenandteens,More than 45 mg/dL,1,limit
+18-highcholesterolinchildrenandteens,every 5 years,1,time
+20-indigestion,more than two weeks,1,limit

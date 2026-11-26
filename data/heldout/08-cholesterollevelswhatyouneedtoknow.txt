@@ -1,0 +1,22 @@
+Cholesterol numbers are measured in milligrams per deciliter (mg/dL). Talk with your provider about what your cholesterol numbers should be. The numbers that are best for you may depend on your age, race, blood pressure, weight, family history, and more. However, here are some general guidelines showing the desirable levels (levels that are healthy for most people):
+Anyone age 19 or younger:
+Type of Cholesterol Healthy Level
+Total Cholesterol Less than 170 mg/dL
+Non-HDL Less than 120 mg/dL
+LDL Less than 110 mg/dL
+HDL More than 45mg/dL
+Men age 20 or older:
+Type of Cholesterol Healthy Level
+Total Cholesterol Less than 200 mg/dL
+Non-HDL Less than 130 mg/dL
+LDL Less than 100 mg/dL
+HDL Greater than or equal to 60 mg/dL is best.
+Levels less than 40 mg/dL are considered low.
+Women age 20 or older:
+Type of Cholesterol Healthy Level
+Total Cholesterol Less than 200 mg/dL
+Non-HDL Less than 130 mg/dL
+LDL Less than 100 mg/dL
+HDL Greater than or equal to 60 mg/dL is best.
+Levels less than 50 mg/dL are considered low.
+Triglycerides are not a type of cholesterol, but they are also measured in this test. A normal triglyceride level is below 150 mg/dL. You might need treatment if you have triglyceride levels that are borderline high (150-199 mg/dL) or high (200 mg/dL or more).
