@@ -1,0 +1,12 @@
+# prompt: Rewrite this health handout in simpler words for a general reader.
+file,model_shown,datetime_with_timezone,resend,notes
+02-alcohol.md,not shown,2026-11-25 20:43 PST,no,model not shown (A1); time is when the output file was saved
+04-backpain.md,not shown,2026-11-25 20:47 PST,no,model not shown (A1); time is when the output file was saved
+06-calcium.md,not shown,2026-11-25 20:48 PST,no,model not shown (A1); time is when the output file was saved
+08-cholesterollevelswhatyouneedtoknow.md,not shown,2026-11-25 20:50 PST,no,model not shown (A1); time is when the output file was saved
+10-cryptosporidiosis.md,not shown,2026-11-25 20:50 PST,no,model not shown (A1); time is when the output file was saved
+12-drymouth.md,not shown,2026-11-25 20:50 PST,no,model not shown (A1); time is when the output file was saved
+14-foodborneillness.md,not shown,2026-11-25 20:52 PST,no,model not shown (A1); first save at 20:50 held output 12 because the clipboard was not refreshed; replaced from the 14 response; time is when the corrected file was saved
+16-glaucoma.md,not shown,2026-11-25 20:54 PST,no,model not shown (A1); time is when the output file was saved
+18-highcholesterolinchildrenandteens.md,not shown,2026-11-25 20:54 PST,no,model not shown (A1); time is when the output file was saved
+20-indigestion.md,not shown,2026-11-25 20:55 PST,no,model not shown (A1); time is when the output file was saved
