@@ -70,3 +70,47 @@ The tracked details were fixed before any output existed. Adding percentages or 
 
 - Running the matcher on these outputs turned up four bugs: "Don't take more than 4" read as the opposite limit, "no longer than" wasn't a known synonym, a limit word just outside a span was ignored, and "N hours a day" was cut short. Every fix turned a false "altered" into "preserved", so the matcher's score on this set is optimistic. The held-out set, marked by hand before the matcher runs, is the fair test.
 - One of those fixes was found after the outputs were seen. I recorded it with the span counts before and after (25 and 25) instead of folding it in silently.
+
+## Nov 25, 2026: the held-out test caught the matcher, not the chatbot
+
+**Short version.** On 10 new excerpts, ChatGPT kept all 50 details Intact tracks. Before anything ran on them, I had marked their details by hand. Intact's matcher did worse than on calibration: it misread 8 of the 50, and 6 of those were false "lost" flags. It had agreed with my calibration labels 25 of 25 times, but I fixed four matcher bugs on that same set, so I expected it to look worse on new text. This is the test built to show by how much.
+
+### The setup
+
+Day 3 froze the extractor, the matcher and the predictions under a git tag. Day 4 then ran in a fixed order, and each step was committed and pushed before the next could see anything new:
+
+1. Hand-marked details, from the source text alone, under the written rules.
+2. The extractor's details, the predictions and the extractor's recall, before any ChatGPT output existed.
+3. The 10 outputs, from the same prompt and run rules as calibration.
+4. Hand labels, checked against the matcher's reading, with every override logged with a reason.
+
+### What the numbers show
+
+| | Calibration | Held-out |
+|---|---|---|
+| Tracked details | 25 | 50 |
+| Lost, by hand labels | 0 | 0 |
+| Matcher readings that matched the hand labels | 25 of 25 | 42 of 50 |
+| False "lost" flags (read as altered or omitted) | 0 | 6 |
+| Read as uncertain, actually preserved | 0 | 2 |
+| Hand-marked details the extractor found | not measured | 49 of 52 |
+
+- Four of the eight wrong readings were limit details in one excerpt. Two of the three details the extractor missed came from the same excerpt.
+- All three missed details were limit details. Intact doesn't track them, so it couldn't flag a change to any of them.
+- 0 losses in 75 tracked details is still consistent with a true loss rate of up to about 4% for this prompt in our test set.
+- The prediction test stayed not testable, as recorded before the run: every prediction was 0%, the same as the baseline.
+
+### Stronger or weaker
+
+As a tool, weaker than calibration made it look. On new text, every "lost" flag it raised was a false alarm. I still haven't seen it catch a real loss outside the unit tests, because the set had none. As evidence, stronger. The calibration score was optimistic for a known reason, and the held-out design measured the gap instead of hiding it. Every error was an over-flag, but with no real losses in the set, I can't say how often it would miss one.
+
+### What changes
+
+- The frozen readings stay the reported results. Any matcher fix is a new version, recorded in a dated addendum entry and shown beside the frozen results, never instead of them.
+- On the page, a "lost" flag means "check this", and the page says how often flags were wrong in our test set.
+
+### Smaller lessons from the same day
+
+- Marking details by hand from written rules is harder than it sounds. "Over" and "a maximum of" read like limits but aren't on the list. A check against the closed lists flagged 6 of my first 63 marks before the extractor ran. After review, 11 marks moved to notes as outside the rules.
+- I saved one output with the previous excerpt's text, because I hadn't refreshed the clipboard. I caught it myself. A check that matched each output to its closest source confirmed it was the only mix-up, and the save helper now refuses a clipboard that matches an output it already saved.
+- The blank labeling sheet should have been committed before labeling, as on Day 3. Its matcher columns matched a fresh rebuild from committed files, so nothing in them had changed.
