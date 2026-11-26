@@ -1,0 +1,28 @@
+{
+  "marked": 52,
+  "located": 52,
+  "found": 49,
+  "recall": 0.9423076923076923,
+  "categoryAgrees": 48,
+  "misses": [
+    {
+      "file": "02-alcohol",
+      "text": "5 or more drinks",
+      "occurrence": 1,
+      "category": "limit"
+    },
+    {
+      "file": "02-alcohol",
+      "text": "4 or more drinks",
+      "occurrence": 1,
+      "category": "limit"
+    },
+    {
+      "file": "08-cholesterollevelswhatyouneedtoknow",
+      "text": "More than 45mg/dL",
+      "occurrence": 1,
+      "category": "limit"
+    }
+  ],
+  "notLocated": []
+}

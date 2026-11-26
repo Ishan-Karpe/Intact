@@ -1,0 +1,402 @@
+{
+  "02-alcohol#1": {
+    "file": "02-alcohol",
+    "category": "limit",
+    "span": "more than 5 drinks",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "02-alcohol#2": {
+    "file": "02-alcohol",
+    "category": "limit",
+    "span": "more than 15 drinks per week",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "02-alcohol#3": {
+    "file": "02-alcohol",
+    "category": "limit",
+    "span": "more than 4 drinks",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "02-alcohol#4": {
+    "file": "02-alcohol",
+    "category": "limit",
+    "span": "more than 8 drinks per week",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "04-backpain#1": {
+    "file": "04-backpain",
+    "category": "limit",
+    "span": "more than three months",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "04-backpain#2": {
+    "file": "04-backpain",
+    "category": "time",
+    "span": "2 days",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "04-backpain#3": {
+    "file": "04-backpain",
+    "category": "time",
+    "span": "three days",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#1": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "6 months",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#2": {
+    "file": "06-calcium",
+    "category": "quantity",
+    "span": "200 mg",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "06-calcium#3": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "7-12 months",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#4": {
+    "file": "06-calcium",
+    "category": "quantity",
+    "span": "260 mg",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "06-calcium#5": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "1-3 years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#6": {
+    "file": "06-calcium",
+    "category": "quantity",
+    "span": "700 mg",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "06-calcium#7": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "4-8 years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#8": {
+    "file": "06-calcium",
+    "category": "quantity",
+    "span": "1,000 mg",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "06-calcium#9": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "9-13 years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#10": {
+    "file": "06-calcium",
+    "category": "quantity",
+    "span": "1,300 mg",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "06-calcium#11": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "14-18 years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#12": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "19-50 years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#13": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "51-70 years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#14": {
+    "file": "06-calcium",
+    "category": "quantity",
+    "span": "1,200 mg",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "06-calcium#15": {
+    "file": "06-calcium",
+    "category": "limit",
+    "span": "71 years and older",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#16": {
+    "file": "06-calcium",
+    "category": "time",
+    "span": "4 to 18 years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "06-calcium#17": {
+    "file": "06-calcium",
+    "category": "limit",
+    "span": "50 years and older",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#1": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "Less than 170 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#2": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "Less than 120 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#3": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "Less than 110 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#4": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "Less than 200 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#5": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "Less than 130 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#6": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "Less than 100 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#7": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "quantity",
+    "span": "60 mg/dL",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "08-cholesterollevelswhatyouneedtoknow#8": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "less than 40 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#9": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "less than 50 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "08-cholesterollevelswhatyouneedtoknow#10": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "quantity",
+    "span": "150 mg/dL",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "08-cholesterollevelswhatyouneedtoknow#11": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "quantity",
+    "span": "150-199 mg/dL",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "08-cholesterollevelswhatyouneedtoknow#12": {
+    "file": "08-cholesterollevelswhatyouneedtoknow",
+    "category": "limit",
+    "span": "200 mg/dL or more",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "10-cryptosporidiosis#1": {
+    "file": "10-cryptosporidiosis",
+    "category": "time",
+    "span": "2 to 10 days",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "10-cryptosporidiosis#2": {
+    "file": "10-cryptosporidiosis",
+    "category": "time",
+    "span": "1 to 2 weeks",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "10-cryptosporidiosis#3": {
+    "file": "10-cryptosporidiosis",
+    "category": "limit",
+    "span": "up to 30 days",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "12-drymouth#1": {
+    "file": "12-drymouth",
+    "category": "limit",
+    "span": "at least twice a year",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "14-foodborneillness#1": {
+    "file": "14-foodborneillness",
+    "category": "limit",
+    "span": "more than 2 hours",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "16-glaucoma#1": {
+    "file": "16-glaucoma",
+    "category": "time",
+    "span": "every one to two years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "16-glaucoma#2": {
+    "file": "16-glaucoma",
+    "category": "limit",
+    "span": "at least once a year",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "18-highcholesterolinchildrenandteens#1": {
+    "file": "18-highcholesterolinchildrenandteens",
+    "category": "quantity",
+    "span": "aged 19",
+    "predictor": null,
+    "baseline": null,
+    "note": "Insufficient calibration data"
+  },
+  "18-highcholesterolinchildrenandteens#2": {
+    "file": "18-highcholesterolinchildrenandteens",
+    "category": "limit",
+    "span": "Less than 170 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "18-highcholesterolinchildrenandteens#3": {
+    "file": "18-highcholesterolinchildrenandteens",
+    "category": "limit",
+    "span": "Less than 120 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "18-highcholesterolinchildrenandteens#4": {
+    "file": "18-highcholesterolinchildrenandteens",
+    "category": "limit",
+    "span": "Less than 110 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "18-highcholesterolinchildrenandteens#5": {
+    "file": "18-highcholesterolinchildrenandteens",
+    "category": "limit",
+    "span": "More than 45 mg/dL",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "18-highcholesterolinchildrenandteens#6": {
+    "file": "18-highcholesterolinchildrenandteens",
+    "category": "time",
+    "span": "every 5 years",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  },
+  "20-indigestion#1": {
+    "file": "20-indigestion",
+    "category": "limit",
+    "span": "more than two weeks",
+    "predictor": 0,
+    "baseline": 0,
+    "note": ""
+  }
+}
