@@ -97,7 +97,8 @@ Day 3 froze the extractor, the matcher and the predictions under a git tag. Day 
 
 - Four of the eight wrong readings were limit details in one excerpt. Two of the three details the extractor missed came from the same excerpt.
 - All three missed details were limit details. Intact doesn't track them, so it couldn't flag a change to any of them.
-- 0 losses in 75 tracked details is still consistent with a true loss rate of up to about 4% for this prompt in our test set.
+- 0 of 75 tracked details were lost, but this is a small sample. The details cluster in a few handouts: one held-out excerpt supplies 17 of the 50. It's also one chatbot, one prompt, short MedlinePlus sections and three kinds of detail.
+- One person, me, marked the details and labeled the outcomes. No second annotator has checked either, so recall and labels both rest on one person's reading.
 - The prediction test stayed not testable, as recorded before the run: every prediction was 0%, the same as the baseline.
 
 ### Stronger or weaker
