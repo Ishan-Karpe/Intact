@@ -115,3 +115,43 @@ As a tool, weaker than calibration made it look. On new text, every "lost" flag 
 - Marking details by hand from written rules is harder than it sounds. "Over" and "a maximum of" read like limits but aren't on the list. A check against the closed lists flagged 6 of my first 63 marks before the extractor ran. After review, 11 marks moved to notes as outside the rules.
 - I saved one output with the previous excerpt's text, because I hadn't refreshed the clipboard. I caught it myself. A check that matched each output to its closest source confirmed it was the only mix-up, and the save helper now refuses a clipboard that matches an output it already saved.
 - The blank labeling sheet should have been committed before labeling, as on Day 3. Its matcher columns matched a fresh rebuild from committed files, so nothing in them had changed.
+
+## Nov 26, 2026: seeding losses to see whether Intact notices
+
+**Short version.** ChatGPT lost nothing in the held-out set, so I still didn't know whether Intact notices a real loss. I wrote down a rule before making any edit. A script then changed 17 tracked details in copies of the held-out outputs: it removed or flipped limit words, doubled numbers, swapped units and deleted details. Intact read none of the 17 as preserved. It read 8 as lost and 9 as uncertain, and it raised no false alarms on the 21 details left untouched. The split is the lesson: a changed limit word gets caught, but a changed number only makes Intact unsure.
+
+### The setup
+
+- I wrote the rule down first and committed its fingerprint, with the edit script, before any edit existed. I tested the script on invented text only.
+- The test used the 42 held-out details that the matcher and I both read as preserved. The 8 I had overridden were left out, because a detail the matcher already misreads would be "caught" for free.
+- Within each category, every other detail was edited and the rest stayed as untouched controls. That gave 21 of each. Four edits were skipped because their text wasn't unique in the output or overlapped another detail, which left 17.
+- Every edit came from fixed tables, such as "at least 2 hours" becoming "2 hours". I checked each one in the diff for placement and type before the matcher ran.
+
+### What it found
+
+| Edit | Edited | Read as lost | Read as uncertain | Read as preserved |
+|---|---|---|---|---|
+| Limit word removed or flipped | 6 | 6 | 0 | 0 |
+| Detail deleted | 5 | 1 | 4 | 0 |
+| Number doubled | 4 | 1 | 3 | 0 |
+| Unit changed | 2 | 0 | 2 | 0 |
+| **All edits** | **17** | **8** | **9** | **0** |
+
+- Before running, I wrote down what the code should do: changed limits would read as altered, and changed numbers and units as uncertain. That's what happened.
+- The one deleted detail read as lost was caught for a different reason. The same number appeared elsewhere in the output with the opposite limit, so the matcher read it as a reversed limit, not a missing one.
+- None of the 21 controls was flagged. They were details the matcher already read correctly, so this shows the edits didn't disturb their neighbours. It doesn't show that false alarms are rare: on the real held-out outputs, 6 of 50 flags were false alarms.
+
+### Why "uncertain" matters
+
+The matcher calls a mention with a different amount of the same kind "uncertain", not "altered", because it can't tell which mention the changed number belongs to. If the page flagged only details read as lost, it would have missed 9 of the 17 seeded losses, including every number and unit change. Treating uncertain as "check this" as well flags all 17. So on the page, uncertain has to mean "look at this", not "probably fine".
+
+### What it doesn't show
+
+- These edits are simple and mechanical, so they're easier to notice than a paraphrase that quietly drops a detail.
+- 17 edits split across 8 kinds leaves 1 to 3 in most cells, so these are counts, not rates.
+- It says whether Intact notices these kinds of edits. It doesn't say how often chatbots make them.
+
+### Smaller lessons from the same day
+
+- Alternating edits across all 42 details at once would have edited 7 of the 8 quantities and left a single control. Alternating within each category kept the controls balanced. I caught this from the committed labels before the rule was fixed.
+- My first look at the diff hid half the edits. The pager cut it off, and copying a colour word-diff ran old and new words together. Plain markers (`[-old-]{+new+}`) with no pager fixed both.
