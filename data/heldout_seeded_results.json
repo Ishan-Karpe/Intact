@@ -1,0 +1,511 @@
+{
+  "edited": {
+    "n": 17,
+    "caught": 8,
+    "uncertain": 9,
+    "flagged": 17,
+    "preserved": 0,
+    "typeMatch": 7
+  },
+  "controls": {
+    "n": 21,
+    "falseAlarms": 0,
+    "uncertain": 0,
+    "preserved": 21
+  },
+  "skipped": {
+    "n": 4,
+    "reasons": {
+      "overlaps another span's matched text": 1,
+      "matched text appears 3 times": 2,
+      "matched text appears 2 times": 1
+    }
+  },
+  "byCategory": {
+    "limit": {
+      "edited": {
+        "n": 9,
+        "caught": 7,
+        "uncertain": 2,
+        "flagged": 9,
+        "preserved": 0
+      },
+      "controls": {
+        "n": 10,
+        "falseAlarms": 0,
+        "uncertain": 0,
+        "preserved": 10
+      }
+    },
+    "time": {
+      "edited": {
+        "n": 6,
+        "caught": 1,
+        "uncertain": 5,
+        "flagged": 6,
+        "preserved": 0
+      },
+      "controls": {
+        "n": 7,
+        "falseAlarms": 0,
+        "uncertain": 0,
+        "preserved": 7
+      }
+    },
+    "quantity": {
+      "edited": {
+        "n": 2,
+        "caught": 0,
+        "uncertain": 2,
+        "flagged": 2,
+        "preserved": 0
+      },
+      "controls": {
+        "n": 4,
+        "falseAlarms": 0,
+        "uncertain": 0,
+        "preserved": 4
+      }
+    }
+  },
+  "byEdit": {
+    "limit: remove the limit": {
+      "n": 3,
+      "caught": 3,
+      "uncertain": 0,
+      "flagged": 3,
+      "preserved": 0
+    },
+    "limit: flip the limit": {
+      "n": 3,
+      "caught": 3,
+      "uncertain": 0,
+      "flagged": 3,
+      "preserved": 0
+    },
+    "limit: delete the span": {
+      "n": 3,
+      "caught": 1,
+      "uncertain": 2,
+      "flagged": 3,
+      "preserved": 0
+    },
+    "time: double the number": {
+      "n": 3,
+      "caught": 1,
+      "uncertain": 2,
+      "flagged": 3,
+      "preserved": 0
+    },
+    "time: delete the span": {
+      "n": 2,
+      "caught": 0,
+      "uncertain": 2,
+      "flagged": 2,
+      "preserved": 0
+    },
+    "time: change the unit": {
+      "n": 1,
+      "caught": 0,
+      "uncertain": 1,
+      "flagged": 1,
+      "preserved": 0
+    },
+    "quantity: change the unit": {
+      "n": 1,
+      "caught": 0,
+      "uncertain": 1,
+      "flagged": 1,
+      "preserved": 0
+    },
+    "quantity: double the number": {
+      "n": 1,
+      "caught": 0,
+      "uncertain": 1,
+      "flagged": 1,
+      "preserved": 0
+    }
+  },
+  "leftOut": 8,
+  "originalsReproduced": "50 of 50",
+  "rows": [
+    {
+      "span_id": "04-backpain#1",
+      "category": "limit",
+      "status": "edited",
+      "edit": "remove the limit",
+      "expected": "altered",
+      "outcome": "altered",
+      "reason": "limit word dropped"
+    },
+    {
+      "span_id": "04-backpain#2",
+      "category": "time",
+      "status": "edited",
+      "edit": "double the number",
+      "expected": "altered",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "04-backpain#3",
+      "category": "time",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#1",
+      "category": "time",
+      "status": "skipped",
+      "edit": "change the unit",
+      "expected": "altered",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#2",
+      "category": "quantity",
+      "status": "skipped",
+      "edit": "double the number",
+      "expected": "altered",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#3",
+      "category": "time",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#4",
+      "category": "quantity",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#5",
+      "category": "time",
+      "status": "edited",
+      "edit": "delete the span",
+      "expected": "omitted",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "06-calcium#6",
+      "category": "quantity",
+      "status": "edited",
+      "edit": "change the unit",
+      "expected": "altered",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "06-calcium#7",
+      "category": "time",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#8",
+      "category": "quantity",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#9",
+      "category": "time",
+      "status": "edited",
+      "edit": "double the number",
+      "expected": "altered",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "06-calcium#10",
+      "category": "quantity",
+      "status": "skipped",
+      "edit": "delete the span",
+      "expected": "omitted",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#11",
+      "category": "time",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#12",
+      "category": "time",
+      "status": "edited",
+      "edit": "change the unit",
+      "expected": "altered",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "06-calcium#13",
+      "category": "time",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#14",
+      "category": "quantity",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "06-calcium#15",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#1",
+      "category": "limit",
+      "status": "edited",
+      "edit": "flip the limit",
+      "expected": "altered",
+      "outcome": "altered",
+      "reason": "limit reversed"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#2",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#3",
+      "category": "limit",
+      "status": "edited",
+      "edit": "delete the span",
+      "expected": "omitted",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#4",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#5",
+      "category": "limit",
+      "status": "skipped",
+      "edit": "remove the limit",
+      "expected": "altered",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#6",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#8",
+      "category": "limit",
+      "status": "edited",
+      "edit": "flip the limit",
+      "expected": "altered",
+      "outcome": "altered",
+      "reason": "limit reversed"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#9",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#10",
+      "category": "quantity",
+      "status": "edited",
+      "edit": "double the number",
+      "expected": "altered",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#11",
+      "category": "quantity",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "08-cholesterollevelswhatyouneedtoknow#12",
+      "category": "limit",
+      "status": "edited",
+      "edit": "delete the span",
+      "expected": "omitted",
+      "outcome": "altered",
+      "reason": "limit reversed"
+    },
+    {
+      "span_id": "10-cryptosporidiosis#1",
+      "category": "time",
+      "status": "edited",
+      "edit": "delete the span",
+      "expected": "omitted",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "10-cryptosporidiosis#2",
+      "category": "time",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "10-cryptosporidiosis#3",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "12-drymouth#1",
+      "category": "limit",
+      "status": "edited",
+      "edit": "remove the limit",
+      "expected": "altered",
+      "outcome": "altered",
+      "reason": "limit word dropped"
+    },
+    {
+      "span_id": "14-foodborneillness#1",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "16-glaucoma#1",
+      "category": "time",
+      "status": "edited",
+      "edit": "double the number",
+      "expected": "altered",
+      "outcome": "altered",
+      "reason": "time window changed"
+    },
+    {
+      "span_id": "16-glaucoma#2",
+      "category": "limit",
+      "status": "edited",
+      "edit": "flip the limit",
+      "expected": "altered",
+      "outcome": "altered",
+      "reason": "limit reversed"
+    },
+    {
+      "span_id": "18-highcholesterolinchildrenandteens#2",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "18-highcholesterolinchildrenandteens#3",
+      "category": "limit",
+      "status": "edited",
+      "edit": "delete the span",
+      "expected": "omitted",
+      "outcome": "uncertain",
+      "reason": "a different amount of the same kind appears"
+    },
+    {
+      "span_id": "18-highcholesterolinchildrenandteens#4",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "18-highcholesterolinchildrenandteens#5",
+      "category": "limit",
+      "status": "edited",
+      "edit": "remove the limit",
+      "expected": "altered",
+      "outcome": "altered",
+      "reason": "limit word dropped"
+    },
+    {
+      "span_id": "18-highcholesterolinchildrenandteens#6",
+      "category": "time",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    },
+    {
+      "span_id": "20-indigestion#1",
+      "category": "limit",
+      "status": "control",
+      "edit": "",
+      "expected": "",
+      "outcome": "preserved",
+      "reason": "same amount, limit and time window"
+    }
+  ]
+}
