@@ -1,0 +1,43 @@
+span_id,file,category,role,edit,expected,status,reason,before,after
+04-backpain#1,04-backpain,limit,edited,remove the limit,altered,edited,,longer than three months,three months
+04-backpain#2,04-backpain,time,edited,double the number,altered,edited,,2 days,4 days
+04-backpain#3,04-backpain,time,control,,,control,,,
+06-calcium#1,06-calcium,time,edited,change the unit,altered,skipped,overlaps another span's matched text,6 months,
+06-calcium#2,06-calcium,quantity,edited,double the number,altered,skipped,matched text appears 3 times,200 mg,
+06-calcium#3,06-calcium,time,control,,,control,,,
+06-calcium#4,06-calcium,quantity,control,,,control,,,
+06-calcium#5,06-calcium,time,edited,delete the span,omitted,edited,,1–3 years,
+06-calcium#6,06-calcium,quantity,edited,change the unit,altered,edited,,700 mg,700 g
+06-calcium#7,06-calcium,time,control,,,control,,,
+06-calcium#8,06-calcium,quantity,control,,,control,,,
+06-calcium#9,06-calcium,time,edited,double the number,altered,edited,,9–13 years,18–26 years
+06-calcium#10,06-calcium,quantity,edited,delete the span,omitted,skipped,matched text appears 3 times,"1,300 mg",
+06-calcium#11,06-calcium,time,control,,,control,,,
+06-calcium#12,06-calcium,time,edited,change the unit,altered,edited,,19–50 years,19–50 months
+06-calcium#13,06-calcium,time,control,,,control,,,
+06-calcium#14,06-calcium,quantity,control,,,control,,,
+06-calcium#15,06-calcium,limit,control,,,control,,,
+08-cholesterollevelswhatyouneedtoknow#1,08-cholesterollevelswhatyouneedtoknow,limit,edited,flip the limit,altered,edited,,Less than 170 mg/dL,More than 170 mg/dL
+08-cholesterollevelswhatyouneedtoknow#2,08-cholesterollevelswhatyouneedtoknow,limit,control,,,control,,,
+08-cholesterollevelswhatyouneedtoknow#3,08-cholesterollevelswhatyouneedtoknow,limit,edited,delete the span,omitted,edited,,Less than 110 mg/dL,
+08-cholesterollevelswhatyouneedtoknow#4,08-cholesterollevelswhatyouneedtoknow,limit,control,,,control,,,
+08-cholesterollevelswhatyouneedtoknow#5,08-cholesterollevelswhatyouneedtoknow,limit,edited,remove the limit,altered,skipped,matched text appears 2 times,Less than 130 mg/dL,
+08-cholesterollevelswhatyouneedtoknow#6,08-cholesterollevelswhatyouneedtoknow,limit,control,,,control,,,
+08-cholesterollevelswhatyouneedtoknow#8,08-cholesterollevelswhatyouneedtoknow,limit,edited,flip the limit,altered,edited,,below 40 mg/dL,more than 40 mg/dL
+08-cholesterollevelswhatyouneedtoknow#9,08-cholesterollevelswhatyouneedtoknow,limit,control,,,control,,,
+08-cholesterollevelswhatyouneedtoknow#10,08-cholesterollevelswhatyouneedtoknow,quantity,edited,double the number,altered,edited,,Below 150 mg/dL,Below 300 mg/dL
+08-cholesterollevelswhatyouneedtoknow#11,08-cholesterollevelswhatyouneedtoknow,quantity,control,,,control,,,
+08-cholesterollevelswhatyouneedtoknow#12,08-cholesterollevelswhatyouneedtoknow,limit,edited,delete the span,omitted,edited,,200 mg/dL or higher,
+10-cryptosporidiosis#1,10-cryptosporidiosis,time,edited,delete the span,omitted,edited,,2 to 10 days,
+10-cryptosporidiosis#2,10-cryptosporidiosis,time,control,,,control,,,
+10-cryptosporidiosis#3,10-cryptosporidiosis,limit,control,,,control,,,
+12-drymouth#1,12-drymouth,limit,edited,remove the limit,altered,edited,,at least twice a year,twice a year
+14-foodborneillness#1,14-foodborneillness,limit,control,,,control,,,
+16-glaucoma#1,16-glaucoma,time,edited,double the number,altered,edited,,every 1 to 2 years,every 2 to 4 years
+16-glaucoma#2,16-glaucoma,limit,edited,flip the limit,altered,edited,,at least once a year,at most once a year
+18-highcholesterolinchildrenandteens#2,18-highcholesterolinchildrenandteens,limit,control,,,control,,,
+18-highcholesterolinchildrenandteens#3,18-highcholesterolinchildrenandteens,limit,edited,delete the span,omitted,edited,,Less than 120 mg/dL,
+18-highcholesterolinchildrenandteens#4,18-highcholesterolinchildrenandteens,limit,control,,,control,,,
+18-highcholesterolinchildrenandteens#5,18-highcholesterolinchildrenandteens,limit,edited,remove the limit,altered,edited,,More than 45 mg/dL,45 mg/dL
+18-highcholesterolinchildrenandteens#6,18-highcholesterolinchildrenandteens,time,control,,,control,,,
+20-indigestion#1,20-indigestion,limit,control,,,control,,,
