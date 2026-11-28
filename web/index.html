@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>Intact</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="js/page.js"></script>
+</head>
+<body>
+<p class="banner" role="note">Do not paste personal health information.</p>
+
+<header>
+  <h1>Intact</h1>
+  <p class="lede">Paste a health text and a simplified version of it. Intact marks whether each limit, time and amount in the original appears the same way in the simplified text, so you know what to check.</p>
+</header>
+
+<main>
+  <div class="pair">
+    <label>Original
+      <textarea id="original" rows="10" spellcheck="false" autocomplete="off"></textarea>
+    </label>
+    <label>Simplified
+      <textarea id="simplified" rows="10" spellcheck="false" autocomplete="off"></textarea>
+    </label>
+  </div>
+
+  <div class="actions">
+    <button id="compare" type="button">Compare</button>
+    <button id="example" class="quiet" type="button" hidden>Try an invented example</button>
+    <p id="status" role="status"></p>
+  </div>
+  <p id="example-note" class="note" hidden>Invented example. Illustrative, not medical advice.</p>
+
+  <section id="results" aria-labelledby="results-title" hidden>
+    <h2 id="results-title">What Intact found</h2>
+    <p id="stale" class="stale" hidden>The texts changed. Press Compare to update.</p>
+
+    <div class="indicators">
+      <div class="indicator">
+        <h3>Details in the original</h3>
+        <ul class="counts">
+          <li class="found"><span id="count-found">0</span> same detail found</li>
+          <li class="change"><span id="count-change">0</span> possible change</li>
+          <li class="unclear"><span id="count-unclear">0</span> couldn't tell</li>
+        </ul>
+        <p class="note">Only the limits, times and amounts Intact found in the original.</p>
+        <p id="flag-note" class="note">In our tests, <span data-n="realFalseAlarms">6</span> of <span data-n="realFlags">6</span> flags like this on real chatbot rewrites were false alarms. But of <span data-n="seededEdits">17</span> changes we made on purpose, <span data-n="seededCaught">8</span> were flagged like this and the other <span data-n="seededUnclear">9</span> read as couldn't tell, so check both.</p>
+      </div>
+      <div class="indicator">
+        <h3>Reading level</h3>
+        <p id="level" class="value"></p>
+        <p class="note">An estimate from sentence and word length. It doesn't show whether readers understand the text.</p>
+      </div>
+      <div class="indicator">
+        <h3>Similarity to the original</h3>
+        <p id="shared" class="value"></p>
+        <p class="note">Words kept in the same order. It doesn't measure whether the meaning is the same.</p>
+      </div>
+    </div>
+
+    <h3>Each detail</h3>
+    <p id="none" hidden>Intact found no limits, times or amounts in the original, so there is nothing to check here.</p>
+    <ol id="details" class="details"></ol>
+    <p class="limit-note">Intact checks limits, times and amounts only. It can miss other changes, doesn't see added sentences, and doesn't check that a detail still applies to the same thing.</p>
+
+    <div class="pair texts">
+      <div>
+        <h3>Original</h3>
+        <div id="original-read" class="read" tabindex="0"></div>
+      </div>
+      <div>
+        <h3>Simplified</h3>
+        <p id="simplified-note" class="note" hidden>As Intact read it, with formatting removed.</p>
+        <div id="simplified-read" class="read" tabindex="0"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Compares text. Does not establish clinical correctness or patient comprehension. Not medical advice.</p>
+  <p>Nothing you paste leaves your browser, and nothing is stored. <a href="methods.html">How Intact works and how it was tested</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src data:; form-action 'none'; base-uri 'none'">
+<title>How Intact works</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <p><a href="index.html">Back to Intact</a></p>
+  <h1>How Intact works</h1>
+  <p class="lede">Intact compares a health text with a simplified version and marks whether each limit, time and amount in the original appears the same way in the simplified text. It flags details for a person to check. It doesn't decide whether either text is correct.</p>
+</header>
+
+<main class="prose">
+  <h2>How a detail is found</h2>
+  <p>Intact uses fixed word lists, not AI. In the original, it looks for three kinds of detail:</p>
+  <ul>
+    <li><strong>Limits:</strong> a number with a limit word. Before the number: <span data-n="limitBefore">“at least”, “at most”, “no more than”, “no less than”, “up to”, “more than”, “less than”, “fewer than”</span>. After it: <span data-n="limitAfter">“or more”, “or less”, “or longer”, “and older”</span>.</li>
+    <li><strong>Times:</strong> how often or how long, such as “twice a day”, “every 6 hours” or “3 days”. Time units: <span data-n="timeUnits">“second”, “minute”, “hour”, “day”, “week”, “month”, “year”</span>.</li>
+    <li><strong>Amounts:</strong> a number with a unit (<span data-n="measureUnits">“mg”, “mcg”, “g”, “kg”, “mL”, “L”, “oz”, “fl oz”, “lb”, “cup”, “tsp”, “tbsp”, “°F”, “°C”, “degree”, “inch”, “foot”, “cm”, “IU”, “unit”, “calorie”, “mmHg”, “mg/dL”</span>), a count (<span data-n="countUnits">“dose”, “tablet”, “pill”, “capsule”, “shot”, “injection”, “serving”, “drink”, “puff”, “drop”</span>), or an age.</li>
+  </ul>
+  <p>It then looks for the same detail in the simplified text, which may use other words, so “no more than” can become “up to”. It compares the number, the unit, the limit and the time window, and gives each detail one of three readings:</p>
+  <ul>
+    <li><strong>Same detail found:</strong> the same amount, limit and time window appear. Intact doesn't check that the detail still applies to the same thing.</li>
+    <li><strong>Possible change, check this:</strong> the detail is missing, or its limit word or time window is different.</li>
+    <li><strong>Couldn't tell, check this:</strong> a different amount of the same kind appears, only a vague one such as “a few days” appears, or the wording is too close to call, such as “at least” becoming “more than”.</li>
+  </ul>
+
+  <h2>What the tests found</h2>
+  <p>One chatbot simplified short MedlinePlus sections with one prompt. <span data-n="calibrationHandouts">10</span> were used to build the rules. The other <span data-n="heldoutHandouts">10</span>, the test handouts, stayed sealed until the rules were locked and fingerprinted. One person marked their details by hand before Intact ran on them.</p>
+  <ul>
+    <li>None of the <span data-n="tracked">75</span> tracked details was omitted or altered in the chatbot's rewrites, by hand check.</li>
+    <li>In the test handouts, Intact found <span data-n="found">49</span> of the <span data-n="marked">52</span> details marked by hand.</li>
+    <li>On the chatbot's real rewrites of the test handouts, <span data-n="realFalseAlarms">6</span> of <span data-n="realFlags">6</span> change flags were false alarms, and <span data-n="realUnclear">2</span> unchanged details read as couldn't tell.</li>
+    <li>To see whether Intact notices real changes, we changed <span data-n="seededEdits">17</span> details on purpose in copies of those rewrites and left <span data-n="controls">21</span> untouched. Intact caught <span data-n="seededCaught">8</span> of the <span data-n="seededEdits">17</span> changes as possible changes. <span data-n="seededUnclear">9</span> of the <span data-n="seededEdits">17</span> read as couldn't tell, which doesn't count as caught, and none read as same detail found. There were <span data-n="controlAlarms">0</span> false alarms on the <span data-n="controls">21</span> untouched details.</li>
+    <li>By type of change: Intact caught every one of the <span data-n="limitEdits">6</span> limits we removed or reversed. <span data-n="numberEditsUnclear">5</span> of <span data-n="numberEdits">6</span> changed numbers and units were not flagged (read as couldn't tell), and <span data-n="numberEditsCaught">1</span> was caught. Of <span data-n="deleteEdits">5</span> deleted details, <span data-n="deleteEditsCaught">1</span> was caught and <span data-n="deleteEditsUnclear">4</span> read as couldn't tell. That's why couldn't tell always says to check.</li>
+  </ul>
+
+  <h2>What Intact can't see</h2>
+  <ul>
+    <li>Sentences or advice added in the simplified text.</li>
+    <li>Whether a detail still applies to the same thing. Illustrative, invented example: if “Take 1 tablet with food. Rest for 2 days.” becomes “Take 1 tablet for 2 days.”, both details read as same detail found.</li>
+    <li>Anything that isn't a limit, time or amount, such as “with food” or “stop if a rash appears”.</li>
+  </ul>
+  <p><strong>Known gaps.</strong> In the test handouts, Intact's extractor missed <span data-n="missed">3</span> limits written in ways its rules don't cover (invented look-alikes, illustrative):</p>
+  <ul>
+    <li>the limit words sit between the number and the unit: “3 or more servings”, “2 or more cups”</li>
+    <li>the number touches the unit with no space: “less than 10mg”</li>
+  </ul>
+  <p>Both are easy to fix. The extractor stayed frozen for this audit, so they're listed here instead of patched.</p>
+  <p class="note">Examples on this page are invented. Illustrative, not medical advice.</p>
+
+  <h2>Limits</h2>
+  <ul>
+    <li>One chatbot and one prompt.</li>
+    <li>Short MedlinePlus sections, not whole handouts.</li>
+    <li>Three kinds of detail.</li>
+    <li>One annotator.</li>
+    <li>A small sample whose details cluster in a few handouts: two of the <span data-n="heldoutHandouts">10</span> test handouts hold <span data-n="clusterDetails">29</span> of their <span data-n="heldoutDetails">50</span> details. Finding no changes here doesn't mean the chatbot never changes them.</li>
+  </ul>
+</main>
+
+<footer>
+  <p>Compares text. Does not establish clinical correctness or patient comprehension. Not medical advice.</p>
+</footer>
+</body>
+</html>

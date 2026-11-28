@@ -143,7 +143,7 @@ As a tool, weaker than calibration made it look. On new text, every "lost" flag 
 
 ### Why "uncertain" matters
 
-The matcher calls a mention with a different amount of the same kind "uncertain", not "altered", because it can't tell which mention the changed number belongs to. If the page flagged only details read as lost, it would have missed 9 of the 17 seeded losses, including every number and unit change. Treating uncertain as "check this" as well flags all 17. So on the page, uncertain has to mean "look at this", not "probably fine".
+The matcher calls a mention with a different amount of the same kind "uncertain", not "altered", because it can't tell which mention the changed number belongs to. If the page flagged only details read as lost, it would have missed 9 of the 17 seeded losses, including 5 of the 6 number and unit changes. Treating uncertain as "check this" as well flags all 17. So on the page, uncertain has to mean "look at this", not "probably fine".
 
 ### What it doesn't show
 
@@ -155,3 +155,33 @@ The matcher calls a mention with a different amount of the same kind "uncertain"
 
 - Alternating edits across all 42 details at once would have edited 7 of the 8 quantities and left a single control. Alternating within each category kept the controls balanced. I caught this from the committed labels before the rule was fixed.
 - My first look at the diff hid half the edits. The pager cut it off, and copying a colour word-diff ran old and new words together. Plain markers (`[-old-]{+new+}`) with no pager fixed both.
+
+## Nov 27, 2026: the page, and a correct match that looked wrong
+
+**Short version.** Intact has a page now. Paste an original and a simplified version, press Compare, and each limit, time and amount in the original gets a reading, with the matching words highlighted in both texts. The page runs the frozen extractor and matcher in the browser. The first run on my invented example showed a correct reading that looked like a mistake, and fixing that shaped the rest of the day.
+
+### What the page shows
+
+- Each detail gets a reading in words, not just a colour: "Same detail found", "Possible change, check this" or "Couldn't tell, check this". Couldn't tell is styled as a warning, never as a pass, because 9 of the 17 seeded changes read that way.
+- Three indicators sit above the details: counts by reading, the change in reading level (in words or whole grades only), and shared wording. Each one says what it doesn't measure.
+- The methods page's numbers are written in from the committed score files by a script. A test fails if a page drifts from those files, or if a sentence around a number stops being true.
+- A content security policy stops the page from sending anything. In a local test, loading the page fetched only its own files, and pressing Compare made no requests.
+
+### The card that looked wrong
+
+- My example says "Do not take more than 4 tablets in 24 hours", and the simplified text says "Don't take more than 4 tablets a day". The matcher reads both negations, so it correctly finds the same limit. But the card quoted only the extracted span, "more than 4 tablets in 24 hours", so a correct match looked wrong.
+- The card now quotes what the matcher read on both sides, including a negation or limit word just outside the span. To do that, the page copies three small rules from the frozen matcher, and a test fails if the copies ever differ.
+- The same example showed a second problem. When the simplified text has a different amount of the same kind, the matcher points at the first one it finds, which can belong to another sentence. For "longer than 3 days" it pointed at "2 hours" from the eating instruction, not at "a week". That card now says "Simplified has a different amount, such as" instead of presenting the quote as the match.
+
+### Couldn't tell isn't a catch
+
+Under the seeded-test rule, a couldn't-tell reading doesn't count as catching a change. The methods page now leads with the totals: 8 of the 17 seeded changes were caught, 9 read as couldn't tell, and there were 0 false alarms on 21 untouched details. The by-type results come after. The compare page's flag note says the same thing, so the two pages no longer disagree about what counts as caught.
+
+### The 3 misses
+
+On Day 6, after scoring, I read the 3 missed phrases (not their sentences) to write invented look-alikes. No locked number changed, because the extractor was frozen and scored on Day 4. Two of the misses put the limit words between the number and the unit, and one has a number touching its unit with no space. The methods page lists invented look-alikes, and a test checks that the extractor misses each one as written and finds it once reordered or spaced.
+
+### Smaller lessons from the same day
+
+- `package.json` and `tsconfig.json` are in the Day 3 freeze manifest, so the build couldn't get a new npm script. Writing in the numbers runs as its own command after the TypeScript build.
+- Correction to Nov 26: I wrote that reading only "lost" would have missed every number and unit change. One doubled number was caught, so it's 5 of the 6.
